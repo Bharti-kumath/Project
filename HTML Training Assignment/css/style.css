@@ -173,3 +173,27 @@ body {
     width: 100%;
   }
 }
+
+
+
+/* Dashboard */
+
+.icon{
+  width: 18px;
+  height: 18px;
+}
+.items{
+  
+  text-align: left;
+  font: normal normal
+  normal 16px/21px roboto;
+  letter-spacing: 0px;
+  color:#3e3e3e;
+  border: none;
+  margin-bottom: 1rem;
+}
+.activelink{
+  background: #fff3f4 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+
+}
