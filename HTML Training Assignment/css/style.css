@@ -192,6 +192,7 @@ body {
 .activelink{
   background: #fff3f4 0% 0% no-repeat padding-box;
   border-radius: 5px;
+  color: #c8242f;
 
 }
 .d-name{
@@ -254,4 +255,40 @@ font-family: Roboto;
   font-size: 15px;
   line-height: 20px;
 
+}
+
+
+
+/* innerpage */
+.form-head{
+  font-size: 22px;
+  line-height: 29px;
+  color: #3E3e3e;
+}
+.sub-head{
+  font-size: 18px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin: 21px 0 15px 0;
+}
+.message{
+  border: 1px solid #ff3535;
+  border-radius: 5px;
+  color: #ff3535;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.message:nth-child(2){
+  border-color: bluue;
+}
+
+.tab{
+  color: #adadad;
+  font-size: 15px;
+  font-weight: 550;
+}
+.activetab{
+  color: #c8242f;
+  border-bottom: 3px solid #c8242f;
+  padding: 8px 16px;
 }
