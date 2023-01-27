@@ -131,9 +131,7 @@ body {
 
 
 @media only screen and (max-width: 768px) {
-  html {
-    font-size: 70%;
-  }
+  
   .login_main {
     padding: 60px;
   }
@@ -183,7 +181,6 @@ body {
   height: 18px;
 }
 .items{
-  
   text-align: left;
   font: normal normal
   normal 16px/21px roboto;
@@ -195,5 +192,66 @@ body {
 .activelink{
   background: #fff3f4 0% 0% no-repeat padding-box;
   border-radius: 5px;
+
+}
+.d-name{
+font-size: 30px;
+line-height: 39px;
+color: #000000;
+font-weight: 700;
+font-family: Roboto;
+}
+.product{
+  width: 44px;
+  height: 44px;
+  height: 100%;
+  margin: 0;
+}
+.numbers{
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  font-weight: 650;
+}
+.table-heading{
+  color: #adadad;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+  font-family: Roboto;
+  
+}
+.table td{
+  padding: 12px 8px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #3e3e3e;
+
+}
+.b-head{
+  font-size: 22px;
+  line-height: 29px;
+  color: #3e3e3e;
+  font-family: Roboto;
+
+}
+.red{
+  color: #c8242f;
+  font-size: 12px;
+  line-height: 16px;
+}
+.dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #c8242f;
+  display:inline-block;
+  margin-right: 9px;
+  vertical-align: middle;
+}
+.country{
+  font-size: 15px;
+  line-height: 20px;
 
 }
