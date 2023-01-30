@@ -8,23 +8,24 @@
     <title>Document</title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/custom.js"></script>
 </head>
 
 <body>
     <div class="container-fluid p-0" style="background-color: #fafafa;">
         <div class="row  mt-4 mx-3" style="background-color: #ffffff;">
-            <div class="col-3 text-start">
+            <div class="col-2 text-start">
 
-                <img src="./images/menu-bar.svg" class="me-4">
+                <img src="./images/menu-bar.svg" class="me-4 togglebutton" onclick="closeNav()"" ondblclick="openNav()">
                 <img src="./images/header-logo.svg" class="me-4">
             </div>
-            <div class="col-3 text-start">
+            <div class="col-2 text-start ps-4">
                 <img src="./images/search-icon.svg" class="icon mx-2 ">
                 <span class="items">Search</span>
 
 
             </div>
-            <div class="col-6 text-end">
+            <div class="col-8 text-end">
                 <img src="./images/notification-icon.svg" class="icon">
                 <img src="./images/profile.png" class="fs-2 me-1 ms-5">
                 <span class="name mx-2">John Doe</span>
@@ -34,13 +35,13 @@
 
 
         </div>
-        <div class="dashboard row ">
-            <div class="col-2" style="background-color: #ffffff;">
+        <div class="row m-0">
+            <div class="col-2" id="mySidebar" style="background-color: #ffffff;">
                 <div class="list-group list-group-flush ms-3 mt-4">
                     <a href="index.html" class="list-group-item items activelink"><img
                             src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
 
-                    <a href="#" class="list-group-item items"><img src="./images/graph-default.svg"
+                    <a href="./innerpage.html" class="list-group-item items"><img src="./images/graph-default.svg"
                             class="icon me-2">Analysis</a>
 
                     <a href="#" class="list-group-item items"><img src="./images/inbox-default.svg"
@@ -60,91 +61,123 @@
 
                 </div>
             </div>
-            <div class="col-10 ps-5 pe-0 pt-4">
-
+            <div class="col-10 p-xl-5 p-md-3 m-0 ">
                 <p class="d-name">Dashboard</p>
-
-                <div class="d-flex flex-row ">
-                    <div class="p-4 d-flex me-4 justify-content-between" style="background-color: #ffffff;">
-                        <div class="pe-3 mb-3">
-                            <img src="./images/star.svg" class="product">
-                        </div>
-                        <div>
-                            <p class="numbers">23,456</p>
-                            <p>New Products</p>
-                        </div>
-                    </div>
-
-                    <div class="p-4 d-flex me-4 justify-content-between" style="background-color: #ffffff;">
-                        <div class="pe-3 mb-3">
-                            <img src="./images/new-product.svg" class="product">
-                        </div>
-                        <div>
-                            <p class="numbers">2345</p>
-                            <p>Added Products</p>
-                        </div>
-                    </div>
-                    <div class="p-4 d-flex me-4 justify-content-between" style="background-color: #ffffff;">
-                        <div class="pe-3 mb-3">
-                            <img src="./images/total-product.svg" class="product">
-                        </div>
-                        <div>
-                            <p class="numbers">32,456</p>
-                            <p>Total Products</p>
-                        </div>
-                    </div>
-                    <div class="p-4 d-flex me-4 justify-content-between" style="background-color: #ffffff;">
-                        <div class="pe-3 mb-3">
-                            <img src="./images/dollar-filled.svg" class="product">
-                        </div>
-                        <div>
-                            <p class="numbers">5678</p>
-                            <p>Today's Sale</p>
-                        </div>
-                    </div>
-                    <div class="p-4 d-flex me-4 justify-content-between" style="background-color: #ffffff;">
-                        <div class="pe-3 mb-3">
-                            <img src="./images/star.svg" class="product">
-                        </div>
-                        <div>
-                            <p class="numbers">33,5342</p>
-                            <p>Total Sale</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row mt-3">
-                    <div class="col-8 p-3">
-                        <div class="d-flex justify-content-between">
-                            <h4 class="b-head">Sales</h4>
-                            <div style="color: #adadad;" class="me-5">
-                                <span class="p-2">Weekly</span> <span class="p-2">Monthly</span> <span class="m-2 pb-2" style="color: #c8242f; border-bottom:1px solid #c8242f;">Yearly</span>
+                <div class="container">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-4">
+                        <div class="col">
+                            <div class="d-flex justify-content-center p-3" style="background-color: #ffffff;">
+                                <div class="pe-3 mb-3">
+                                    <img src="./images/star.svg" class="product">
+                                </div>
+                                <div>
+                                    <p class="numbers">23,456</p>
+                                    <p>New Products</p>
+                                </div>
                             </div>
                         </div>
-                        <img src="./images/data-graph.png" class="img-flluid">
-                    </div>
-                    <div class="col-4 p-3">
-                        <h4 class="b-head">Sales by Country</h4>
-                        <img src="./images/pie-chart.svg" class="ps-5">
-                        <div class="country row">
-                            <p class="col-7"><span class="dot"></span>United States Of America </p>
-                            <p class="col-5"><span class="dot"></span>Canada</p>
-                            <p class="col-7"><span class="dot"></span>Russia</p>
-                            <p class="col-5"><span class="dot"></span>India</p>
+
+                        <div class="col">
+                            <div class="d-flex justify-content-center p-3" style="background-color: #ffffff;">
+                                <div class="pe-3 mb-3">
+                                    <img src="./images/new-product.svg" class="product">
+                                </div>
+                                <div>
+                                    <p class="numbers">2345</p>
+                                    <p>Added Products</p>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-center p-3" style="background-color: #ffffff;">
+                                <div class="pe-3 mb-3">
+                                    <img src="./images/total-product.svg" class="product">
+                                </div>
+                                <div>
+                                    <p class="numbers">32,456</p>
+                                    <p>Total Products</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-center p-3" style="background-color: #ffffff;">
+                                <div class="pe-3 mb-3">
+                                    <img src="./images/dollar-filled.svg" class="product">
+                                </div>
+                                <div>
+                                    <p class="numbers">5678</p>
+                                    <p>Today's Sale</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-center p-3" style="background-color: #ffffff;">
+                                <div class="pe-3 mb-3">
+                                    <img src="./images/money-bag.svg" class="product">
+                                </div>
+                                <div>
+                                    <p class="numbers">33,5342</p>
+                                    <p>Total Sale</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
 
 
+                <div class="container">
+                    <div class="row my-5 g-3">
 
-                <div style="background-color: #ffffff; border-radius: 5px;" class="p-5">
+                        <div class="col-xl-8 col-sm-12">
+                            <div style="background-color: #ffffff;" class="p-4">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="b-head">Sales</h4>
+                                    <div style="color: #adadad;" class="me-5">
+                                        <span class="p-2">Weekly</span> <span class="p-2">Monthly</span> <span
+                                            class="pb-2"
+                                            style="color: #c8242f; border-bottom:1px solid #c8242f;">Yearly</span>
+                                    </div>
+                                </div>
+                                <img src="./images/data-graph.png" class="img-fluid mt-4">
+                            </div>
+
+                        </div>
+                        <div class="col-xl-4 col-sm-12">
+                            <div class="p-4" style="background-color: #ffffff;">
+                                <h4 class="b-head">Sales by Country</h4>
+                                <div class="row ">
+                                    <div class="col-xl-12 col-md-6">
+                                        <img src="./images/pie-chart.svg" class="ps-5">
+                                    </div>
+
+                                    <div class="col-xl-12 col-md-6 pt-md-4 pt-xl-0">
+                                        <div class="country row pt-md-2 m-0">
+                                            <p class="col-xl-8 col-12 p-0"><span class="dot"></span>United States Of
+                                                America
+                                            </p>
+                                            <p class="col-xl-4 col-12 p-0"><span class="dot"></span>Canada</p>
+                                            <p class="col-xl-8 col-12 p-0"><span class="dot"></span>Russia</p>
+                                            <p class="col-xl-4 col-12 p-0"><span class="dot"></span>India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div style="background-color: #ffffff; border-radius: 5px;" class="p-5 mt-5">
                     <div class="d-flex justify-content-between mb-2">
                         <h4 class="b-head">Invoices</h4>
                         <h4 class="red">View All</h4>
                     </div>
-                    
+
                     <table class="table">
                         <thead class="table-heading">
                             <tr>
