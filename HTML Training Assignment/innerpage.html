@@ -9,7 +9,8 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/custom.js"></script>
+
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
@@ -18,31 +19,36 @@
 
 <body>
     <div class="container-fluid p-0" style="background-color: #fafafa;">
-        <div class="row  mt-4 mx-3" style="background-color: #ffffff;">
-            <div class="col-2 text-start">
+        <div class="row mt-0 mt-lg-4 mx-md-3 mx-1 align-items-center" style="background-color: #ffffff;">
+            <div class="col-4 col-sm-3 p-0 text-start">
 
-                <img src="./images/menu-bar.svg" class="me-4 togglebutton" onclick="closeNav()"" ondblclick="
-                    openNav()">
-                <img src="./images/header-logo.svg" class="me-4">
+                <img src="./images/menu-bar.svg" class="me-sm-4 me-0 menu-btn-desktop">
+                <button class="btn menu-btn me-sm-4 me-0 d-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample">
+                    <img src="./images/menu-bar.svg">
+                </button>
+
+                <img src="./images/header-logo.svg" class="logo">
             </div>
-            <div class="col-2 text-start ps-4">
+            <div class="col-sm-2 col-3 text-start ps-4">
                 <img src="./images/search-icon.svg" class="icon mx-2 ">
-                <span class="items">Search</span>
+                <span class="items search-icon">Search</span>
 
 
             </div>
-            <div class="col-8 text-end">
-                <img src="./images/notification-icon.svg" class="icon">
-                <img src="./images/profile.png" class="fs-2 me-1 ms-5">
-                <span class="name mx-2">John Doe</span>
+            <div class="col-sm-7 col-5  text-end">
+                <img src="./images/notification-icon.svg" class="icon me-md-5 me-1">
+                <img src="./images/profile.png" class="fs-md-2 profile me-1 ">
+                <span class="name mx-sm-2 mx-0">John Doe</span>
                 <img src="./images/downward-arrow.svg" class="icon">
             </div>
 
-
-
         </div>
+
+
+
         <div class="row m-0">
-            <div class="col-2 d-none" id="mySidebar" style="background-color: #ffffff;">
+            <div class="col-2 desktop" id="mySidebar" style="background-color: #ffffff;">
                 <div class="list-group list-group-flush ms-3 mt-4">
                     <a href="index.html" class="list-group-item items activelink"><img
                             src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
@@ -67,18 +73,73 @@
 
                 </div>
             </div>
-            <div class="col-md-10 col-12 p-lg-4 p-5">
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title me-5" id="offcanvasExampleLabel"><img src="./images/header-logo.svg">
+                    </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <div class="list-group list-group-flush ms-3 mt-4">
+                            <a href="index.html" class="list-group-item items activelink"><img
+                                    src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
+
+                            <a href="./innerpage.html" class="list-group-item items"><img
+                                    src="./images/graph-default.svg" class="icon me-2">Analysis</a>
+
+                            <a href="#" class="list-group-item items"><img src="./images/inbox-default.svg"
+                                    class="icon me-2">Inbox</a>
+
+                            <a href="#" class="list-group-item items"><img src="./images/clock-default.svg"
+                                    class="icon me-2">History</a>
+
+                            <a href="#" class="list-group-item items"><img src="./images/user-default.svg"
+                                    class="icon me-2">Users</a>
+
+                            <a href="#" class="list-group-item items"><img src="./images/maintenance-default.svg"
+                                    class="icon me-1">Maintainence</a>
+
+                            <a href="#" class="list-group-item items"><img src="./images/setting-default.svg"
+                                    class="icon me-2">Setting</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-lg-10 col-12 p-lg-4 p-5">
                 <h4 class="d-name">Analysis</h4>
                 <form class="form p-2">
                     <p class="form-head">One Column</p>
                     <input class="form-control mb-3" type="text" placeholder="Name">
-                    <select class="form-control mb-3">
-                        <option>Dropdown</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                    <div class="dropdown col-12">
+                        <img src="./images/select-downward.svg" class="arrow icon">
+                        <select class="form-control mb-3">
+                            <option >Dropdown</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
                     <textarea class="form-control mb-3" type="text" rows="4" placeholder="Multiple line"></textarea>
                 </form>
 
@@ -94,53 +155,115 @@
                         </div>
 
                         <div class="col">
-                            <select class="form-control col-6">
-                                <option class="form-control">Dropdown</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
+                            <div class="dropdown col-12">
+                                <img src="./images/select-downward.svg" class="arrow icon">
+                                <select class="form-control mb-3">
+                                    <option >Dropdown</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+
                         </div>
                     </div>
                 </form>
 
 
-                <form class=" form form1 mt-4 p-2 d-none">
+                <form class=" form four  mt-4 p-2">
                     <p class="form-head">Three Column</p>
-                    <div class="container">
+                    
                         <div class="row  row-cols-md-3  row-cols-1 g-4 gy-sm-5">
                             <div class="col">
-                                <div class="p-3" style="position: relative; top: 0rem;">
-                                    <input type="text" id="Focus" class="" />
-                                    <label for="Focus" class="form-label">Focus</label>
-
-                                </div>
-
+                            
+                                <div class="inputContainer">
+                                    <input type="text" class="input4" placeholder="a">
+                                    <label for="" class="label4">Focus</label>
+                                  </div>
+                            
+                            
+                            
                             </div>
-
                             <div class="col">
-                                <div class="p-3" style="position: relative; top: 0rem;">
-                                    <input type="text" id="Password" class="" />
-                                    <label for="Focus" class="form-label">Password</label>
-
-                                </div>
-
+                                
+                                <div class="inputContainer">
+                                    <input type="Password" class="input4" placeholder="a">
+                                    <label for="" class="label4">Password</label>
+                                  </div>
+                            
+                            
                             </div>
-
                             <div class="col">
-                                <div class="p-3" style="position: relative;"> <input type="text" id="Focus"
-                                        class="disabled" placeholder="Disabled" />
-                                    <label for="Focus" class="form-label">Disabled</label>
-
-                                </div>
+                                
+                                <div class="inputContainer">
+                                    <input type="text" class="input4 disabled" placeholder="a">
+                                    <label for="" class="label4">Disabled</label>
+                                  </div>
+                            
+                            
+                            
                             </div>
-
+    
                         </div>
+                    
+                </form>
+
+                <form class="form four mt-4 p-2">
+                    <p class="form-head">Four Column</p>
+                    <div class="row row-cols-sm-4 row-cols-1 g-4">
+                        <div class="col">
+                            
+                            <div class="inputContainer">
+                                <input type="text" class="input4" placeholder="a">
+                                <label for="" class="label4">Designation</label>
+                                <span>Enter Valid data</span>
+                              </div>
+                        
+                        
+                        
+                        </div>
+                        <div class="col">
+                            
+                            <div class="inputContainer">
+                                <input type="text" class="input4" placeholder="s">
+                                <label for="" class="label4">Name</label>
+                                <span>Enter Your full Name as per ID</span>
+                              </div>
+                        
+                        
+                        </div>
+                        <div class="col">
+                            
+                            <div class="inputContainer">
+                                <input type="text" class="input4" placeholder="a">
+                                <label for="" class="label4">Username</label>
+                              </div>
+                        
+                        
+                        
+                        </div>
+
+                        <div class="col">
+                            <div class="dropdown col-12">
+                                <img src="./images/select-downward.svg" class="arrow icon">
+                                <select class="form-control mb-3">
+                                    <option >Dropdown</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+</div>
+
                     </div>
                 </form>
 
-                <div class="p-2">
 
-                    <p class="form-head mt-5">Other Design Eslements</p>
+                <div class="">
+
+                    <p class="form-head mt-5">Other Design Elements</p>
                     <p class="sub-head">File Upload</p>
                     <input type="file" id="actual-btn" hidden />
 
@@ -171,114 +294,115 @@
                         option 2
                     </label>
                 </div>
-            
 
-            <p class="sub-head">Checkbox</p>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Option 1</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Option 2</label>
-            </div>
-        
 
-        <p class="sub-head">Snackbar</p>
-        <div class="container">
-            <div class="row row-cols-md-2  row-cols-1 g-4">
-                <div class="col">
-                    <div class=" message p-3">
-                        <img src="./images/error-icon.svg" class="icon"><span>This is an error
-                            Message</span>
+                <p class="sub-head">Checkbox</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Option 1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Option 2</label>
+                </div>
+
+
+                <p class="sub-head">Snackbar</p>
+                <div class="container">
+                    <div class="row row-cols-md-2  row-cols-1 g-4">
+                        <div class="col">
+                            <div class=" message p-3">
+                                <img src="./images/error-icon.svg" class="icon"><span>This is an error
+                                    Message</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" message p-3" style="border-color: #00b9e1; color: #00b9e1;"><img
+                                    src="./images/info-icon.svg" class="icon me-1"><span>This is an
+                                    information
+                                    Message!</span></div>
+                        </div>
+                        <div class="col">
+                            <div class=" message p-3" style="border-color: #ffa800; color: #ffa800;"><img
+                                    src="./images/warning-icon.svg" class="icon me-1"><span>This is an
+                                    Warning
+                                    Message</span></div>
+                        </div>
+                        <div class="col">
+                            <div class=" message p-3" style="border-color: #00af27; color: #00af27;"><img
+                                    src="./images/success-icon.svg" class="icon me-1"><span>This is an
+                                    Success
+                                    Message!</span></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class=" message p-3" style="border-color: #00b9e1; color: #00b9e1;"><img
-                            src="./images/info-icon.svg" class="icon me-1"><span>This is an
-                            information
-                            Message!</span></div>
+
+
+                <p class="sub-head">Call to action</p>
+                <div class="button">
+                    <button type="button" class="btn btn-danger me-3 px-3 fs-4"
+                        style="border-radius: 23px;">Primary</button>
+                    <button type="button" class="btn btn-outline-danger px-3 fs-4"
+                        style="border-radius: 23px;">Secondry</button>
+
                 </div>
-                <div class="col">
-                    <div class=" message p-3" style="border-color: #ffa800; color: #ffa800;"><img
-                            src="./images/warning-icon.svg" class="icon me-1"><span>This is an
-                            Warning
-                            Message</span></div>
+
+                <p class="sub-head">Tabs</p>
+                <div class="container">
+                    <ul class="nav nav-tabs mb-3" style="border-bottom: 1px solid #ADADAD;">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="tabs-1" data-bs-toggle="tab" href="#tab-1" role="tab">Tab
+                                1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tabs-2" data-bs-toggle="tab" href="#tab-2">Tab 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tabs-3" data-bs-toggle="tab" href="#tab-3">Tab 3</a>
+                        </li>
+                    </ul>
+                    <!-- Tabs navs -->
+
+                    <!-- Tabs content -->
+                    <div class="tab-content">
+                        <div class="tab-pane  active" id="tab-1">
+                            <p>Tab 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab-2">
+                            <p>Tab 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab-3">
+                            <p>Tab 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <div class=" message p-3" style="border-color: #00af27; color: #00af27;"><img
-                            src="./images/success-icon.svg" class="icon me-1"><span>This is an
-                            Success
-                            Message!</span></div>
-                </div>
+                <!-- Tabs content -->
+
+
+
+
+
+
             </div>
         </div>
-
-
-        <p class="sub-head">Call to action</p>
-        <div class="button">
-            <button type="button" class="btn btn-danger me-3 px-3 fs-4" style="border-radius: 23px;">Primary</button>
-            <button type="button" class="btn btn-outline-danger px-3 fs-4"
-                style="border-radius: 23px;">Secondry</button>
-
-        </div>
-
-        <p class="sub-head">Tabs</p>
-        <div class="container">
-            <ul class="nav nav-tabs mb-3" style="border-bottom: 1px solid #ADADAD;">
-                <li class="nav-item">
-                    <a class="nav-link active" id="tabs-1" data-bs-toggle="tab" href="#tab-1" role="tab">Tab
-                        1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="tabs-2" data-bs-toggle="tab" href="#tab-2">Tab 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="tabs-3" data-bs-toggle="tab" href="#tab-3">Tab 3</a>
-                </li>
-            </ul>
-            <!-- Tabs navs -->
-
-            <!-- Tabs content -->
-            <div class="tab-content">
-                <div class="tab-pane  active" id="tab-1">
-                    <p>Tab 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing</p>
-                </div>
-                <div class="tab-pane fade" id="tab-2">
-                    <p>Tab 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing</p>
-                </div>
-                <div class="tab-pane fade" id="tab-3">
-                    <p>Tab 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                        Letraset sheets containing</p>
-                </div>
-            </div>
-        </div>
-        <!-- Tabs content -->
-
-
-
-
-
-
     </div>
     </div>
-    </div>
-    </div>
-
+    <script src="./js/bootstrap.bundle.js"></script>
     <script>
 
 
