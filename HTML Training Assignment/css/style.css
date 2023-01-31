@@ -110,9 +110,27 @@ body {
 .hiddenbutton {
   display: block;
 }
+
+
+@media only screen and (max-width: 1260px) {
+
+.login_main{padding: 20px;}
+
+.login_details {
+  padding: 0 30px;
+}
+
+.login_tagline{
+  font-size: 2rem;
+}
+
+
+
+
+}
 @media only screen and (max-width: 960px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
   .login_main {
     padding: 30px;
@@ -266,6 +284,10 @@ body {
   font-size: 0.9rem;
   line-height: 1.25rem;
   color: #3e3e3e;
+  
+}
+.tableslide{
+  overflow-x: scroll !important;
 }
 
 .paid {
@@ -290,8 +312,8 @@ body {
   border-radius: 5px;
 }
 .b-head {
-  font-size: 22px;
-  line-height: 29px;
+  font-size: 1.375rem;
+  line-height: 1.8rem;
   color: #3e3e3e;
   font-family: Roboto;
 }
@@ -301,17 +323,17 @@ body {
   line-height: 16px;
 }
 .dot {
-  height: 18px;
-  width: 18px;
+  height: 1.125rem;
+  width: 1.125rem;
   border-radius: 50%;
   background-color: #c8242f;
   display: inline-block;
-  margin-right: 9px;
+  margin-right: 0.5rem;
   vertical-align: middle;
 }
 .country {
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
 }
 
 /* innerpage */
@@ -341,10 +363,14 @@ body {
   background-color: none !important;
 }
 .nav-link {
-  border: none;
+  border: none !important;
   color: #adadad;
   font-size: 15px;
   font-weight: 550;
+}
+.nav-link:hover{
+outline: none !important;
+color: #adadad;
 }
 
 input {
@@ -458,10 +484,49 @@ select:focus {
   border: 1px solid #ff3b3b;
 }
 
-.input4:not(:placeholder-shown)+ .label4 {
-  top: -7px;
-  left: 3px;
-  z-index: 10;
-  font-size: 14px;
-  font-weight: 600;
+
+.warnings{
+  font-size: 12px !important;
+  padding-left: 15px;
+}
+
+
+
+
+.table th{
+  display: none;
+}
+.table td{
+  display: block;
+}
+.table td::before{
+  content: attr(data-th);
+  width: 40%;
+  display: inline-block;
+  color: #adadad;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+  font-family: Roboto;
+  
+}
+.table th, .table td{
+  text-align: left;
+}
+@MEDIA SCREEN AND (max-width:650px){
+.table tr:nth-child(odd) {
+background-color: #faf6f6 !important;
+
+}}
+
+@media screen and (min-width:650px) {
+  .table td::before{
+          display: none;
+
+  }
+  .table th, .table td{
+          display: table-cell;
+          /* padding: 0.25rem 0.5rem; */
+  }
 }

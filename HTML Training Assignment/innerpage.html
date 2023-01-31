@@ -47,13 +47,13 @@
 
 
 
-        <div class="row m-0">
+        <div class="row m-0" >
             <div class="col-2 desktop" id="mySidebar" style="background-color: #ffffff;">
-                <div class="list-group list-group-flush ms-3 mt-4">
-                    <a href="index.html" class="list-group-item items activelink"><img
-                            src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
+                <div class="list-group list-group-flush ms-xl-3 ms-1 mt-4">
+                    <a href="dashboard.html" class="list-group-item items "><img
+                            src="./images/dashboard-default.svg" class="icon ms-2 me-2">Dashboard</a>
 
-                    <a href="#" class="list-group-item items"><img src="./images/graph-default.svg"
+                    <a href="innerpage.html" class="list-group-item items activelink"><img src="./images/graph-active.svg"
                             class="icon me-2">Analysis</a>
 
                     <a href="#" class="list-group-item items"><img src="./images/inbox-default.svg"
@@ -86,12 +86,12 @@
                 <div class="offcanvas-body">
                     <div>
                         <div class="list-group list-group-flush ms-3 mt-4">
-                            <a href="index.html" class="list-group-item items activelink"><img
-                                    src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
-
-                            <a href="./innerpage.html" class="list-group-item items"><img
-                                    src="./images/graph-default.svg" class="icon me-2">Analysis</a>
-
+                            <a href="dashboard.html" class="list-group-item items "><img
+                                src="./images/dashboard-default.svg" class="icon ms-2 me-2">Dashboard</a>
+    
+                        <a href="innerpage.html" class="list-group-item items activelink"><img src="./images/graph-active.svg"
+                                class="icon me-2">Analysis</a>
+    
                             <a href="#" class="list-group-item items"><img src="./images/inbox-default.svg"
                                     class="icon me-2">Inbox</a>
 
@@ -126,7 +126,7 @@
 
             <div class="col-lg-10 col-12 p-lg-4 p-5">
                 <h4 class="d-name">Analysis</h4>
-                <form class="form p-2">
+                <form class="form p-2" style="background-color: #ffffff;">
                     <p class="form-head">One Column</p>
                     <input class="form-control mb-3" type="text" placeholder="Name">
                     <div class="dropdown col-12">
@@ -143,7 +143,7 @@
                     <textarea class="form-control mb-3" type="text" rows="4" placeholder="Multiple line"></textarea>
                 </form>
 
-                <form class="form mt-4 p-2">
+                <form class="form mt-4 p-2" style="background-color: #ffffff;">
                     <p class="form-head">Two Column</p>
                     <div class="row row-cols-sm-2 row-cols-1">
                         <div class="col mb-3"><input class="form-control col-6" type="text" placeholder="Name"></div>
@@ -171,7 +171,7 @@
                 </form>
 
 
-                <form class=" form four  mt-4 p-2">
+                <form class=" form four  mt-4 p-2" style="background-color: #ffffff;">
                     <p class="form-head">Three Column</p>
                     
                         <div class="row  row-cols-md-3  row-cols-1 g-4 gy-sm-5">
@@ -197,7 +197,7 @@
                             <div class="col">
                                 
                                 <div class="inputContainer">
-                                    <input type="text" class="input4 disabled" placeholder="a">
+                                    <input type="text" class="input4 disabled" placeholder="a" disabled>
                                     <label for="" class="label4">Disabled</label>
                                   </div>
                             
@@ -209,7 +209,7 @@
                     
                 </form>
 
-                <form class="form four mt-4 p-2">
+                <form class="form four mt-4 p-2" style="background-color: #ffffff;">
                     <p class="form-head">Four Column</p>
                     <div class="row row-cols-sm-4 row-cols-1 g-4">
                         <div class="col">
@@ -217,8 +217,9 @@
                             <div class="inputContainer">
                                 <input type="text" class="input4" placeholder="a">
                                 <label for="" class="label4">Designation</label>
-                                <span>Enter Valid data</span>
+                                
                               </div>
+                              <span class="warnings text-danger">Enter Valid data</span>
                         
                         
                         
@@ -228,9 +229,9 @@
                             <div class="inputContainer">
                                 <input type="text" class="input4" placeholder="s">
                                 <label for="" class="label4">Name</label>
-                                <span>Enter Your full Name as per ID</span>
                               </div>
                         
+                              <span class="warnings">Enter Your full Name as per ID</span>
                         
                         </div>
                         <div class="col">
@@ -261,9 +262,9 @@
                 </form>
 
 
-                <div class="">
+                <div class="mt-5" style="background-color: #ffffff;">
 
-                    <p class="form-head mt-5">Other Design Elements</p>
+                    <p class="form-head">Other Design Elements</p>
                     <p class="sub-head">File Upload</p>
                     <input type="file" id="actual-btn" hidden />
 
@@ -275,7 +276,7 @@
                     <span id="filechosed">No item Selected</span>
 
 
-                </div>
+                
 
 
 
@@ -345,10 +346,10 @@
                     <button type="button" class="btn btn-outline-danger px-3 fs-4"
                         style="border-radius: 23px;">Secondry</button>
 
-                </div>
+                </div></div>
 
                 <p class="sub-head">Tabs</p>
-                <div class="container">
+                <div class="container" style="background-color: #ffffff;">
                     <ul class="nav nav-tabs mb-3" style="border-bottom: 1px solid #ADADAD;">
                         <li class="nav-item">
                             <a class="nav-link active" id="tabs-1" data-bs-toggle="tab" href="#tab-1" role="tab">Tab
@@ -366,7 +367,7 @@
                     <!-- Tabs content -->
                     <div class="tab-content">
                         <div class="tab-pane  active" id="tab-1">
-                            <p>Tab 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            <p style="color: #3e3e3e;">Tab 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                 Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book. It has
                                 survived not only five centuries, but also the leap into electronic typesetting,
@@ -374,7 +375,7 @@
                                 Letraset sheets containing</p>
                         </div>
                         <div class="tab-pane fade" id="tab-2">
-                            <p>Tab 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            <p style="color: #3e3e3e;">Tab 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                 Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book. It has
                                 survived not only five centuries, but also the leap into electronic typesetting,
@@ -382,7 +383,7 @@
                                 Letraset sheets containing</p>
                         </div>
                         <div class="tab-pane fade" id="tab-3">
-                            <p>Tab 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            <p style="color: #3e3e3e;">Tab 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                 Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book. It has
                                 survived not only five centuries, but also the leap into electronic typesetting,

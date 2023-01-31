@@ -9,18 +9,105 @@
         <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
 </head>
+<style>
+.table th{
+        display: none;
+}
+.table td{
+        display: block;
+}
+.table td::before{
+        content: attr(data-th);
+        font-weight: bold;
+        width: 50%;
+        display: inline-block;
+        color: black;
+}
+.table th, .table td{
+        text-align: left;
+}
+@MEDIA SCREEN AND (max-width:600px){
+.table tr:nth-child(odd) {
+  background-color: #ccd5dc !important;
+}}
 
+@media screen and (min-width:600px) {
+        .table td::before{
+                display: none;
+
+        }
+        .table th, .table td{
+                display: table-cell;
+                padding: 0.25rem 0.5rem;
+        }
+}
+</style>
 <body>
         <div class="container">
                 <DIV class="row">
-                        <div class="col">
-                                <button class="btn menu-btn" type="button" data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasExample">
-                                        <img src="./images/menu-bar.svg">
-                                </button>
-
-                                
+                        <div style="background-color: #ffffff; border-radius: 5px;" class="p-5 mt-5 tableslide">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h4 class="b-head">Invoices</h4>
+                                    <h4 class="red">View All</h4>
+                                </div>
+            
+                                <table class="table">
+                                    <thead class="table-heading">
+                                        <tr>
+                                            <th>INVOICE</th>
+            
+                                            <th>COMPANY NAME</th>
+            
+                                            <th>EMAIL</th>
+            
+                                            <th>DUE DATE</th>
+            
+                                            <th>STATUS</th>
+            
+                                            <th>AMOUNT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="status">
+                                            <td data-th="INVOICE">651535</td>
+                                            <td data-th="COMPANY NAME">Public Adjusting Firm</td>
+                                            <td data-th="EMAIL">georgia.young@example.com</td>
+                                            <td data-th="DUE DATE">24 May,2020</td>
+                                            <td  data-th="STATUS"><span class="paid">Paid</span></td>
+                                            <td data-th="AMOUNT">$47,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="INVOICE">558612</td>
+                                            <td data-th="COMPANY NAME">Other</td>
+                                            <td data-th="EMAIL">jessica.young@example.com</td>
+                                            <td data-th="DUE DATE">24 May,2020</td>
+                                            <td data-th="STATUS" ><span class="paid">Paid</span></td>
+                                            <td data-th="EMAIL">$98,800</td>
+                                        </tr>
+                                        <tr class="status">
+                                                <td data-th="INVOICE">651535</td>
+                                                <td data-th="COMPANY NAME">Public Adjusting Firm</td>
+                                                <td data-th="EMAIL">georgia.young@example.com</td>
+                                                <td data-th="DUE DATE">24 May,2020</td>
+                                                <td  data-th="STATUS"><span class="paid">Paid</span></td>
+                                                <td data-th="AMOUNT">$47,800</td>
+                                            </tr>
+            
+                                        
+                                        
+                                    </tbody>
+            
+                                </table>
+                            </div>
                         </div>
+            
+            
+            
+            
+            
+            
+            
+            
                 </DIV>
         </div>
         <script src="./js/bootstrap.bundle.js"></script>

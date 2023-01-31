@@ -41,14 +41,14 @@
 
 
 
-        <div class="row m-0">
+        <div class="row m-0" >
             <div class="col-2 desktop" id="mySidebar" style="background-color: #ffffff;">
-                <div class="list-group list-group-flush ms-3 mt-4">
-                    <a href="index.html" class="list-group-item items activelink"><img
-                            src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
+                <div class="list-group list-group-flush ms-xl-3 ms-1 mt-4">
+                    <a href="dashboard.html" class="list-group-item items activelink"><img
+                        src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
 
-                    <a href="#" class="list-group-item items"><img src="./images/graph-default.svg"
-                            class="icon me-2">Analysis</a>
+                <a href="innerpage.html" class="list-group-item items "><img src="./images/graph-default.svg"
+                        class="icon me-2">Analysis</a>
 
                     <a href="#" class="list-group-item items"><img src="./images/inbox-default.svg"
                             class="icon me-2">Inbox</a>
@@ -70,51 +70,42 @@
 
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-                    <h5 class="offcanvas-title me-5" id="offcanvasExampleLabel"><img
-                                    src="./images/header-logo.svg"></h5>
-                    <button type="button" class="btn-close text-reset"
-                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title me-5" id="offcanvasExampleLabel"><img src="./images/header-logo.svg">
+                    </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
                     <div>
-                            <div class="list-group list-group-flush ms-3 mt-4">
-                                    <a href="index.html"
-                                            class="list-group-item items activelink"><img
-                                                    src="./images/dashboard-active.svg"
-                                                    class="icon ms-2 me-2">Dashboard</a>
+                        <div class="list-group list-group-flush ms-3 mt-4">
+                            <a href="dashboard.html" class="list-group-item items activelink"><img
+                                src="./images/dashboard-active.svg" class="icon ms-2 me-2">Dashboard</a>
+    
+                        <a href="innerpage.html" class="list-group-item items "><img src="./images/graph-default.svg"
+                                class="icon me-2">Analysis</a>
+    
+                            <a href="#" class="list-group-item items"><img src="./images/inbox-default.svg"
+                                    class="icon me-2">Inbox</a>
 
-                                    <a href="./innerpage.html"
-                                            class="list-group-item items"><img
-                                                    src="./images/graph-default.svg"
-                                                    class="icon me-2">Analysis</a>
+                            <a href="#" class="list-group-item items"><img src="./images/clock-default.svg"
+                                    class="icon me-2">History</a>
 
-                                    <a href="#" class="list-group-item items"><img
-                                                    src="./images/inbox-default.svg"
-                                                    class="icon me-2">Inbox</a>
+                            <a href="#" class="list-group-item items"><img src="./images/user-default.svg"
+                                    class="icon me-2">Users</a>
 
-                                    <a href="#" class="list-group-item items"><img
-                                                    src="./images/clock-default.svg"
-                                                    class="icon me-2">History</a>
+                            <a href="#" class="list-group-item items"><img src="./images/maintenance-default.svg"
+                                    class="icon me-1">Maintainence</a>
 
-                                    <a href="#" class="list-group-item items"><img
-                                                    src="./images/user-default.svg"
-                                                    class="icon me-2">Users</a>
+                            <a href="#" class="list-group-item items"><img src="./images/setting-default.svg"
+                                    class="icon me-2">Setting</a>
 
-                                    <a href="#" class="list-group-item items"><img
-                                                    src="./images/maintenance-default.svg"
-                                                    class="icon me-1">Maintainence</a>
-
-                                    <a href="#" class="list-group-item items"><img
-                                                    src="./images/setting-default.svg"
-                                                    class="icon me-2">Setting</a>
-
-                            </div>
+                        </div>
                     </div>
 
+                </div>
             </div>
-    </div>
 
 
 
@@ -127,10 +118,10 @@
 
 
 
-            <div class="col-lg-10 col-12 p-lg-4 p-5">
+                <div class="col-lg-10 col-12 p-lg-4 p-sm-5 p-3">
                 <p class="d-name">Dashboard</p>
-                <div class="container">
-                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-4">
+                <div class="container-fluid">
+                    <div class="row row-cols-sm-2 row-cols-1 row-cols-lg-5 g-2 g-lg-4">
                         <div class="col">
                             <div class="d-flex justify-content-center p-3" style="background-color: #ffffff;">
                                 <div class="pe-3 mb-3">
@@ -194,7 +185,7 @@
 
 
 
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row my-5 g-3">
 
                         <div class="col-xl-8 col-sm-12">
@@ -212,21 +203,21 @@
 
                         </div>
                         <div class="col-xl-4 col-sm-12">
-                            <div class="p-4" style="background-color: #ffffff;">
+                            <div class="p-sm-4 p-1 pb-1 mt-4 mt-sm-0" style="background-color: #ffffff;">
                                 <h4 class="b-head">Sales by Country</h4>
-                                <div class="row ">
-                                    <div class="col-xl-12 col-md-6">
-                                        <img src="./images/pie-chart.svg" class="ps-5">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-12 col-md-5 col-6">
+                                        <img src="./images/pie-chart.svg" class="ps-lg-5 img-fluid">
                                     </div>
 
-                                    <div class="col-xl-12 col-md-6 pt-md-4 pt-xl-0">
+                                    <div class="col-xl-12 col-md-6 col-6 pt-1 pt-xl-0">
                                         <div class="country row pt-md-2 m-0">
-                                            <p class="col-xl-8 col-12 p-0"><span class="dot"></span>United States Of
+                                            <p class="col-xl-8 col-12 p-md-0 pb-2"><span class="dot"></span>United States Of
                                                 America
                                             </p>
-                                            <p class="col-xl-4 col-12 p-0"><span class="dot"></span>Canada</p>
-                                            <p class="col-xl-8 col-12 p-0"><span class="dot"></span>Russia</p>
-                                            <p class="col-xl-4 col-12 p-0"><span class="dot"></span>India</p>
+                                            <p class="col-xl-4 col-12 p-md-0 pb-2"><span class="dot" style="background-color: #a2b86c;"></span>Canada</p>
+                                            <p class="col-xl-8 col-12 p-md-0 pb-2"><span class="dot" style="background-color: #f16c20;"></span>Russia</p>
+                                            <p class="col-xl-4 col-12 p-md-0 pb-2"><span class="dot" style="background-color: #ebc844;"></span>India</p>
                                         </div>
                                     </div>
                                 </div>
@@ -238,7 +229,7 @@
 
                 </div>
 
-                <div style="background-color: #ffffff; border-radius: 5px;" class="p-5 mt-5">
+                <div style="background-color: #ffffff; border-radius: 5px;" class="p-5 mt-5 tableslide">
                     <div class="d-flex justify-content-between mb-2">
                         <h4 class="b-head">Invoices</h4>
                         <h4 class="red">View All</h4>
@@ -261,78 +252,78 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="status">
-                                <td>651535</td>
-                                <td>Public Adjusting Firm</td>
-                                <td>georgia.young@example.com</td>
-                                <td>24 May,2020</td>
-                                <td ><span class="paid">Paid</span></td>
-                                <td>$47,800</td>
+                            <tr>
+                                <td data-th="INVOICE">651535</td>
+                                <td data-th="COMPANY NAME">Public Adjusting Firm</td>
+                                <td data-th="EMAIL">georgia.young@example.com</td>
+                                <td data-th="DUE DATE">24 May,2020</td>
+                                <td  data-th="STATUS"><span class="paid">Paid</span></td>
+                                <td data-th="AMOUNT">$47,800</td>
                             </tr>
                             <tr>
-                                <td>558612</td>
-                                <td>Other</td>
-                                <td>jessica.young@example.com</td>
-                                <td>24 May,2020</td>
-                                <td ><span class="paid">Paid</span></td>
-                                <td>$98,800</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Other</td>
+                                <td data-th="EMAIL">jessica.young@example.com</td>
+                                <td data-th="DUE DATE">24 May,2020</td>
+                                <td data-th="STATUS"><span class="paid">Paid</span></td>
+                                <td data-th="AMOUNT">$98,800</td>
                             </tr>
 
                             <tr>
-                                <td>558612</td>
-                                <td>Vendor</td>
-                                <td>alma.lawson@example.com</td>
-                                <td>8 Sep,2020</td>
-                                <td ><span class="paid">Paid</span></td>
-                                <td>$20,900</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Vendor</td>
+                                <td data-th="EMAIL">alma.lawson@example.com</td>
+                                <td data-th="DUE DATE">8 Sep,2020</td>
+                                <td data-th="STATUS" ><span class="paid">Paid</span></td>
+                                <td data-th="AMOUNT">$20,900</td>
                             </tr>
                             <tr>
-                                <td>558612</td>
-                                <td>Vendor</td>
-                                <td>alma.lawson@example.com</td>
-                                <td>8 Sep,2020</td>
-                                <td ><span class="paid">Paid</span></td>
-                                <td>$20,900</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Vendor</td>
+                                <td data-th="EMAIL">alma.lawson@example.com</td>
+                                <td data-th="DUE DATE">8 Sep,2020</td>
+                                <td data-th="STATUS"><span class="paid">Paid</span></td>
+                                <td data-th="AMOUNT">$20,900</td>
                             </tr>
                             <tr>
-                                <td>558612</td>
-                                <td>Vendor</td>
-                                <td>alma.lawson@example.com</td>
-                                <td>8 Sep,2020</td>
-                                <td ><span class="failed">Failedd</span></td>
-                                <td>$10,200</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Vendor</td>
+                                <td data-th="EMAIL">alma.lawson@example.com</td>
+                                <td data-th="DUE DATE">8 Sep,2020</td>
+                                <td data-th="STATUS"><span class="failed">Failedd</span></td>
+                                <td data-th="AMOUNT">$10,200</td>
                             </tr>
                             <tr>
-                                <td>558612</td>
-                                <td>Vendor</td>
-                                <td>alma.lawson@example.com</td>
-                                <td>8 Sep,2020</td>
-                                <td ><span class="pending">Pending</span></td>
-                                <td>$12,600</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Vendor</td>
+                                <td data-th="EMAIL">alma.lawson@example.com</td>
+                                <td data-th="DUE DATE">8 Sep,2020</td>
+                                <td data-th="STATUS"><span class="pending">Pending</span></td>
+                                <td data-th="AMOUNT">$12,600</td>
                             </tr>
                             <tr>
-                                <td>558612</td>
-                                <td>Vendor</td>
-                                <td>alma.lawson@example.com</td>
-                                <td>8 Sep,2020</td>
-                                <td ><span class="paid">Paid</span></td>
-                                <td>$11,170</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Vendor</td>
+                                <td data-th="EMAIL">alma.lawson@example.com</td>
+                                <td data-th="DUE DATE">8 Sep,2020</td>
+                                <td data-th="STATUS"><span class="paid">Paid</span></td>
+                                <td data-th="AMOUNT">$11,170</td>
                             </tr>
                             <tr>
-                                <td>558612</td>
-                                <td>Vendor</td>
-                                <td>alma.lawson@example.com</td>
-                                <td>8 Sep,2020</td>
-                                <td ><span class="failed">Failed</span></td>
-                                <td>$28,000</td>
+                                <td data-th="INVOICE">558612</td>
+                                <td data-th="COMPANY NAME">Vendor</td>
+                                <td data-th="EMAIL">alma.lawson@example.com</td>
+                                <td data-th="DUE DATE">8 Sep,2020</td>
+                                <td data-th="STATUS"><span class="failed">Failed</span></td>
+                                <td data-th="AMOUNT">$28,000</td>
                             </tr>
                             <tr>
-                                <td>44903</td>
-                                <td>Insurance Carrier</td>
-                                <td>curtis.weaver@example.com</td>
-                                <td>21 Sep,2020</td>
-                                <td ><span class="paid">Paid</span></td>
-                                <td>$10,000</td>
+                                <td data-th="INVOICE">44903</td>
+                                <td data-th="COMPANY NAME">Insurance Carrier</td>
+                                <td data-th="EMAIL">curtis.weaver@example.com</td>
+                                <td data-th="DUE DATE">21 Sep,2020</td>
+                                <td data-th="STATUS"><span class="paid">Paid</span></td>
+                                <td data-th="AMOUNT">$10,000</td>
                             </tr>
                         </tbody>
 
